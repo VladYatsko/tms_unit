@@ -68,7 +68,8 @@ class Triangle(object):
         return self.a == self.b == self.c
 
     def two_sides_eq(self) -> bool:
-        return self.a == self.b or self.a == self.c or self.b == self.c
+        return self.a == self.b or self.a == self.c \
+            or self.b == self.c
 
     def __del__(self):
         del self
