@@ -36,5 +36,8 @@ class TestTriangleUnit(unittest.TestCase):
     
     def test_del(self):
         self.assertIsNone(self.first.__del__())
-        
+
+    @unittest.expectedFailure
+    def test_is_right_angled(self):
+        self.assertEqual(self.first.a ** 2 + self.first.b ** 2, self.first.c ** 2)
         
